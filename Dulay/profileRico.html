@@ -38,8 +38,19 @@
     text-decoration: none;
     color: #111;
     font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #f6b400;
+  }
+  nav a:active {
+    color: #f6b400;
   }
   nav a.active {
+    color: #f6b400;
+    font-weight: 700;
+  }
+  a {
     color: #f6b400;
     font-weight: 700;
   }
@@ -191,10 +202,8 @@
     <div class="moon"><button id="mode-switch" onclick="modeChange()">⏾</button></div>
     <nav>
       <ul>
-        <li><a href="" class="active">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Resume</a></li>
+        <li><a href="profileRico.html" class="active">Home</a></li>
+        <li><a href="dulay.html" target="_blank">Resume</a></li>
         <hr>
       </ul>
     </nav>
