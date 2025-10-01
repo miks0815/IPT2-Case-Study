@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justine Endree T. Capiendo - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .nav-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen font-sans">
+    <div class="flex min-h-screen">
+        
+        <nav class="bg-white shadow-xl w-64 fixed h-full z-10">
+            <div class="p-6">
+                <div class="text-2xl font-bold text-gray-800 mb-8 text-center">Justine Endree T. Capiendo</div>
+                <div class="space-y-3">
+                    <button onclick="showSection('home')" class="nav-btn active w-full text-left px-4 py-3 rounded-lg transition-colors duration-200 hover:bg-blue-100 flex items-center">
+                        <span class="mr-3">🏠</span>Home
+                    </button>
+                    <button onclick="showSection('hobbies')" class="nav-btn w-full text-left px-4 py-3 rounded-lg transition-colors duration-200 hover:bg-blue-100 flex items-center">
+                        <span class="mr-3">🎯</span>Hobbies
+                    </button>
+                    <button onclick="showSection('education')" class="nav-btn w-full text-left px-4 py-3 rounded-lg transition-colors duration-200 hover:bg-blue-100 flex items-center">
+                        <span class="mr-3">🎓</span>Education
+                    </button>
+                    <button onclick="showSection('about')" class="nav-btn w-full text-left px-4 py-3 rounded-lg transition-colors duration-200 hover:bg-blue-100 flex items-center">
+                        <span class="mr-3">👨‍💻</span>About Me
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        
+        <div class="flex-1 ml-64 p-8">
+            
+            <div id="home" class="section active">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="flex flex-col lg:flex-row items-center gap-8">
+                        
+                        <div class="flex-shrink-0">
+                            <div class="w-64 h-64 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                                <img src="capiendo.jpg" alt="">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="flex-1 text-center lg:text-left">
+                            <h1 class="text-5xl font-bold text-gray-800 mb-4">Hi, I am Justine Endree T. Capiendo</h1>
+                            <p class="text-2xl text-blue-600 font-semibold mb-6">BSIT WMA 4C</p>
+                            <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                                <p>Welcome to my personal resume website! I'm a passionate Information Technology student currently pursuing my Bachelor of Science in Information Technology, specializing in Web and Mobile Applications.</p>
+                                <p>I'm dedicated to learning cutting-edge technologies and developing innovative solutions that make a difference. My journey in IT has been filled with exciting challenges and continuous growth.</p>
+                                <p>I'm excited to share my journey, interests, and aspirations with you through this website. Feel free to explore and learn more about my background, hobbies, and goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+        <div id="hobbies" class="section">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">My Hobbies</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-orange-100 to-red-100 p-6 rounded-xl shadow-md">
+                        <div class="text-4xl mb-4 text-center">🏀</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Playing Basketball</h3>
+                        <p class="text-gray-600 text-center">I love the teamwork, strategy, and physical challenge that basketball brings. It's my go-to activity for staying active and having fun with friends.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-100 to-purple-100 p-6 rounded-xl shadow-md">
+                        <div class="text-4xl mb-4 text-center">🎬</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Watching Anime & Movies</h3>
+                        <p class="text-gray-600 text-center">I enjoy exploring different stories, characters, and worlds through anime and movies. It's a great way to relax and get inspired by creative storytelling.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-100 to-teal-100 p-6 rounded-xl shadow-md">
+                        <div class="text-4xl mb-4 text-center">📱</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Playing Mobile Games</h3>
+                        <p class="text-gray-600 text-center">Mobile gaming helps me unwind and connect with friends. I appreciate the creativity and technology that goes into game development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div id="education" class="section">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Education</h2>
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border-l-4 border-blue-500">
+                        <div class="flex items-center mb-3">
+                            <div class="text-2xl mr-3">🎓</div>
+                            <h3 class="text-xl font-semibold text-gray-800">College</h3>
+                        </div>
+                        <p class="text-gray-700 font-medium">Bachelor of Science in Information Technology</p>
+                        <p class="text-gray-600">Web and Mobile Applications (WMA 4C)</p>
+                        <p class="text-gray-500 text-sm mt-2">Currently pursuing my degree with focus on modern web and mobile development technologies.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border-l-4 border-green-500">
+                        <div class="flex items-center mb-3">
+                            <div class="text-2xl mr-3">📚</div>
+                            <h3 class="text-xl font-semibold text-gray-800">Senior High School</h3>
+                        </div>
+                        <p class="text-gray-700 font-medium">Senior High School Graduate</p>
+                        <p class="text-gray-500 text-sm mt-2">Completed senior high school education, building foundation for higher learning.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border-l-4 border-yellow-500">
+                        <div class="flex items-center mb-3">
+                            <div class="text-2xl mr-3">🏫</div>
+                            <h3 class="text-xl font-semibold text-gray-800">Junior High School</h3>
+                        </div>
+                        <p class="text-gray-700 font-medium">Junior High School Graduate</p>
+                        <p class="text-gray-500 text-sm mt-2">Completed junior high school education with strong academic performance.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border-l-4 border-purple-500">
+                        <div class="flex items-center mb-3">
+                            <div class="text-2xl mr-3">🎒</div>
+                            <h3 class="text-xl font-semibold text-gray-800">Elementary</h3>
+                        </div>
+                        <p class="text-gray-700 font-medium">Elementary School Graduate</p>
+                        <p class="text-gray-500 text-sm mt-2">Completed elementary education, establishing fundamental learning skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+            <div id="about" class="section">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">About Me</h2>
+                    <div class="max-w-4xl mx-auto">
+                        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl mb-8">
+                            <div class="flex items-center justify-center mb-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed text-center mb-6">
+                                Hello! I'm Justine Endree T. Capiendo, a dedicated Information Technology student specializing in Web and Mobile Applications. Currently in my 4th year, I'm passionate about creating innovative digital solutions and staying up-to-date with the latest technology trends.
+                            </p>
+                            <p class="text-lg text-gray-700 leading-relaxed text-center mb-6">
+                                My journey in IT has been driven by curiosity and a desire to solve real-world problems through technology. I believe in continuous learning and am always eager to take on new challenges that help me grow both personally and professionally.
+                            </p>
+                            <p class="text-lg text-gray-700 leading-relaxed text-center">
+                                When I'm not coding or studying, you'll find me on the basketball court, watching the latest anime series, or exploring new mobile games. I believe that a balanced lifestyle helps fuel creativity and keeps me motivated in my academic and professional pursuits.
+                            </p>
+                        </div>
+                        
+                        
+                        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Me</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                
+
+                                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-200">
+                                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Facebook</h4>
+                                    <a href="https://www.facebook.com/justineendree.capiendo.3" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                                        facebook.com/justineendree.capiendo.3
+                                    </a>
+                                </div>
+                                
+                                
+                                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-200">
+                                    <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Email</h4>
+                                    <a href="mailto:capiendojustie0316@email.com" class="text-red-600 hover:text-red-800 transition-colors duration-200">
+                                        capiendojustie0316@email.com
+                                    </a>
+                                </div>
+                                
+                                
+                                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-200">
+                                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Phone</h4>
+                                    <a href="tel:+639123456789" class="text-green-600 hover:text-green-800 transition-colors duration-200">
+                                        +63 951 171 3573
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionName) {
+            
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            
+            document.getElementById(sectionName).classList.add('active');
+            
+            
+            event.target.classList.add('active');
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9874940cc6c08d05',t:'MTc1OTI0NDMwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
