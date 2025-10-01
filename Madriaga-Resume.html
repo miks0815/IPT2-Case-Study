@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hezzele Madriaga - Resume</title>
+    <style>
+        /* Enable smooth scrolling for the entire page */
+        html {
+            scroll-behavior: smooth; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f0ec; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #a38371; 
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #c7b199; 
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: #f4dcd3; 
+            border-radius: 15px; 
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: white;
+            background-color: #a38371; 
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 0;
+            text-align: center; 
+        }
+
+        #about-me {
+            grid-column: 1 / -1;
+        }
+
+        #about-me .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+        }
+
+        #about-me .content img {
+            max-width: 150px; 
+            border-radius: 15px; 
+        }
+
+        #about-me .content div {
+            flex-grow: 1; 
+            padding-right: 20px; 
+        }
+
+        #personal-info, #education, #contact, #skills {
+            background-color: #f4dcd3;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        #personal-info h2, #education h2, #contact h2, #skills h2 {
+            color: white;
+            background-color: #a38371;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        #skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #skills li {
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            #about-me {
+                grid-column: auto;
+            }
+
+            #about-me .content {
+                flex-direction: column;
+                align-items: center; 
+                text-align: center; 
+            }
+
+            #about-me .content img {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+
+            #about-me .content div {
+                padding-right: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about-me">ABOUT ME</a>
+        <a href="#personal-info">PERSONAL INFO</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <div class="container">
+        <div class="card" id="about-me">
+            <h2>ABOUT ME</h2>
+            <div class="content">
+                <div>
+                    <h3>Hezzele M. Madriaga</h3>
+                </div>
+                <img src="Hezzele.jpg" alt="Profile Image">
+            </div>
+        </div>
+
+        <div class="card" id="personal-info">
+            <h2>PERSONAL INFO</h2>
+            <p><strong>Age:</strong> 23 years old</p>
+            <p><strong>Birthday:</strong> April 20, 2002</p>
+            <p><strong>Address:</strong> New Salem, Gerona, Tarlac</p>
+        </div>
+
+        <div class="card" id="education">
+            <h2>EDUCATION</h2>
+            <p><strong>Course:</strong> BSIT</p>
+            <p><strong>College:</strong> Tarlac State University</p>
+            <p><strong>High School:</strong> Vargas High School</p>
+            <p><strong>Elementary:</strong> New Salem Elem School</p>
+        </div>
+
+        <div class="card" id="skills">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Layout Design</li>
+                <li>UI/UX Design</li>
+                <li>Illustration</li>
+            </ul>
+        </div>
+
+        <div class="card" id="contact">
+            <h2>CONTACT</h2>
+            <p><strong>Phone:</strong> 09156447128</p>
+            <p><strong>Email:</strong> hezzele@gmail.com</p>
+            <p><strong>Facebook:</strong> Hezzele Madriaga</p>
+        </div>
+    </div>
+
+</body>
+</html>
