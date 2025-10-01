@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juramuel N. Antigo - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f2f8e7;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #3a5d2e, #7aa75e);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d9f99d;
+    }
+
+    .btn-download {
+      background-color: #d9f99d;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #2e4600;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-download:hover {
+      background-color: #c0e27c;
+    }
+
+    /* Profile */
+    .profile {
+      text-align: center;
+      padding: 60px 25px;
+      background: linear-gradient(to bottom, #7aa75e, #c9e8a8);
+    }
+
+    .profile img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    .profile h1 {
+      font-size: 28px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .profile p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: #3a5d2e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #2e4600;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #2e4600;
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-transform: uppercase;
+      border-bottom: 3px solid #d9f99d;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    section p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* box */
+    .box {
+      background: #d9f99d;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 15px auto;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #b5d99c;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact Form */
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .contact button {
+      background: #3a5d2e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #2e4600;
+    }
+
+    /* Footer */
+    footer {
+      background: #3a5d2e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Juramuel N. Antigo</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#" class="btn-download">⬇ Download Resume</a>
+  </header>
+
+  <!-- Profile -->
+  <div class="profile">
+    <img src="prfile.jpg" alt="Profile Picture">
+    <h1>Juramuel N. Antigo</h1>
+    <p>Phone: 0912-306-8199 | Email: juramuel@gmail.com</p>
+    <p>San Pascual, Tarlac City, Tarlac</p>
+    <a href="#" class="back-btn">Back to Landing Page</a>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am currently studying at <strong>Tarlac State University</strong>, pursuing a
+      <strong>Bachelor of Science in Information Technology</strong>.  
+      I am passionate about technology, committed to continuous learning, and interested in web development
+      and innovative projects.  
+      My goal is to graduate, secure a stable job, and contribute to the tech industry.
+    </p>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="box">
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> Juramuel N. Antigo</p>
+      <p><strong>Age:</strong> 22</p>
+      <p><strong>Birthday:</strong> March 15, 2003</p>
+      <p><strong>Address:</strong> San Pascual, Tarlac City</p>
+    </div>
+
+    <div class="box">
+      <h3>Educational Background</h3>
+      <p><strong>College:</strong> Tarlac State University (2022 – 2025)</p>
+      <p><strong>Senior High School:</strong> San Manuel High School (2020 – 2021)</p>
+      <p><strong>Junior High School:</strong> San Manuel High School (2016 – 2020)</p>
+      <p><strong>Elementary:</strong> Señora Elementary School (2009 – 2015)</p>
+    </div>
+  </section>
+
+  <!-- Skills  -->
+  <section id="skills">
+    <h2>Skills & Interests</h2>
+    <div class="skills">
+      <div class="skill">Web Development</div>
+      <div class="skill">IT Support</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Teamwork</div>
+      <div class="skill">Continuous Learning</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="box">
+      <p><strong>Phone:</strong> 0912-306-8199</p>
+      <p><strong>Email:</strong> juramuel@gmail.com</p>
+      <p><strong>Facebook:</strong> Juramuel Antigo</p>
+    </div>
+    <div class="contact">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Juramuel N. Antigo. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
