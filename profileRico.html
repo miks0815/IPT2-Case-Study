@@ -44,39 +44,39 @@
     font-weight: 700;
   }
   .moon {
-  border: 1px solid #111;
-  border-radius: 50%;
-  color: #ffffff;
-  width: 50px;
-  height: 50px;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    border: 1px solid #111;
+    border-radius: 50%;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px; padding: 40px;
     min-height: calc(100vh - 140px);
-    }
+  }
   .image-cont {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .image-cont img {
     width: 500px;
     height: 500px;
     object-fit: cover;
     border-radius: 5px;
-    }
+  }
   
   .desc-cont {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    }
+  }
   .desc-cont .tag {
     display: inline-block;
     background: #e6e6e6;
@@ -85,34 +85,40 @@
     border-radius: 4px;
     font-size: 12px;
     margin-bottom: 16px;
-    }
+  }
   .desc-cont h1 {
     font-size: 42px;
     margin-bottom: 16px;
-    }
+  }
   .desc-cont p {
     color: #555;
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.6;
-    }
+  }
+  .desc-cont li {
+    color: #555;
+    margin-bottom: 16px;
+  }
   .desc-cont a {
     text-decoration: none;
     color: #111;
     font-weight: 600;
     margin-bottom: 20px;
-    }
+  }
   button {
     color: #e6e6e6;
     background-color: #111;
     border: none;
     cursor: pointer;
-    }
+  }
+
+  /* eto dark mode na */
   button.dark-mode {
     color: #111;
-    background-color: #e6e6e6;
+    background-color: #ffffff;
   }
-  /* tapos eto dark mode */
+
   body.dark-mode {
     background: #111;
     color: #fff;
@@ -141,10 +147,42 @@
     align-items: center;
     justify-content: center;
   }
+  .desc-cont.dark-mode {
+    display: inline-block;
+    background: #ffffff;
+    color: #111;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  .tag.dark-mode {
+    display: inline-block;
+    background: #e6e6e6;
+    color: #111;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  a.dark-mode {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  body.dark-mode .desc-cont p {
+    color: #F5F5F0;
+  }
+
+  body.dark-mode .desc-cont li {
+    color: #F5F5F0;
+  }
+
   @media (max-width: 900px) {
-  .container {grid-template-columns: 1fr; min-height: auto;}
-  .image-section img {height: auto;}
-  .content-section h1 {font-size: 28px;}
+    .container {grid-template-columns: 1fr; min-height: auto;}
+    .image-section img {height: auto;}
+    .content-section h1 {font-size: 28px;}
   }
   </style>
 </head>
@@ -174,10 +212,15 @@
       <li>"Just go with the flow."</li>
     </div>
   </div>
+
   <script>
     function modeChange() {
-      document.body.classList.toggle('dark-mode')
-      document.header.classList.toggle('dark-mode')
+
+      document.body.classList.toggle('dark-mode');
+      document.querySelector('header').classList.toggle('dark-mode');
+      document.querySelector('.moon').classList.toggle('dark-mode');
+      document.querySelectorAll('nav a').forEach(item => item.classList.toggle('dark-mode'));
+      document.querySelector('button').classList.toggle('dark-mode');
     }
   </script>
 </body>
