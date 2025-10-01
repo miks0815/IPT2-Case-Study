@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      background: #f8fafc;
+    }
+
+
+    .sidebar {
+      width: 230px;
+      background: #1e293b;
+      color: #fff;
+      padding: 20px;
+      position: fixed;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 25px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .sidebar nav {
+      width: 100%;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      text-align: center;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+      background: #38bdf8;
+      color: #1e293b;
+    }
+
+    
+    .content {
+      flex: 1;
+      margin-left: 230px;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    section h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    
+    #home {
+  background: linear-gradient(135deg, #d7fff7, #0ea5e9);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home img {
+  width: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+    #about {
+      background: #82a0b9;
+    }
+
+    #hobbies {
+      background: #2e457d;
+    }
+
+    #education {
+      background: #272652;
+    }
+
+    #info {
+      background: #111227;
+    }
+
+   
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="sidebar">
+    <h2>Mikka Ella E. Paras</h2>
+    <nav>
+      <a href="#home" class="active">🏠 Home</a>
+      <a href="#about">ℹ️ About Me</a>
+      <a href="#hobbies">🎯 Hobbies</a>
+      <a href="#education">🎓 Education</a>
+      <a href="#info">📌 Information</a>
+    </nav>
+  </div>
+
+  
+  <div class="content">
+   
+<section id="home">
+    <div class="card" style="background:#e80585; border-left:5px solid #070707;">
+  <div style="text-align: center;">
+    <img src="paras.jpg" alt="Profile Picture">
+    <h1>Hi, I am Mikka Ella E. Paras</h1>
+    <h3>BSIT WMA 4C</h3>
+    <p>Welcome to my personal resume website! Navigate using the sidebar to know more about me.</p>
+  </div>
+</div>
+</section>
+
+
+   
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="card" style="background:#00eaff; border-left:5px solid #0015ff;">
+        <p>Hello! I’m <strong>Mikka Ella E. Paras</strong>, a BS Information Technology student major in 
+      <em>Web and Mobile Application</em> at Tarlac State University.  
+      I am a motivated learner who enjoys turning ideas into digital solutions. Aside from my academic journey, I value creativity, problem-solving, and teamwork.  
+      I believe that technology can bring positive change, and I aspire to use my skills to build 
+      applications that are both functional and user-friendly. In my free time, I explore new tech trends, read short stories, and sometimes relax by 
+      watching movies or listening to music. I aim to grow continuously, both personally 
+      and professionally, while preparing myself for future opportunities in the tech industry.</p>
+      </div>
+    </section>
+
+    
+    <section id="hobbies">
+      <h1>Hobbies</h1>
+      <div class="card" style="background:#fce7f3; border-left:5px solid #ec4899;">
+        <p>• Reading short stories <br>
+           • Watching movies <br>
+           • Playing online games <br>
+           • Listening to music</p>
+      </div>
+    </section>
+
+    
+<section id="education">
+  <h1 style="text-align:center; margin-bottom: 20px;">Education</h1>
+
+  <div class="card" style="background:#e0f2fe; border-left:5px solid #0284c7;">
+    <h3>🎓 College</h3>
+    <p><strong>Bachelor of Science in Information Technology</strong><br>
+       Major in Web and Mobile Applications<br>
+       <em>Currently pursuing my degree with focus on modern web and mobile development technologies.</em>
+    </p>
+  </div>
+
+  <div class="card" style="background:#dcfce7; border-left:5px solid #16a34a;">
+    <h3>🏫 Senior High School</h3>
+    <p><strong>Tarlac National High School - Main</strong><br>
+       Senior High School Graduate<br>
+       <em>S.Y 2019-2020</em>
+    </p>
+  </div>
+
+  <div class="card" style="background:#fef9c3; border-left:5px solid #facc15;">
+    <h3>📘 Junior High School</h3>
+    <p><strong>Tarlac National High School - Main</strong><br>
+       Junior High School Graduate<br>
+       <em>S.Y 2015-2018</em>
+    </p>
+  </div>
+
+  <div class="card" style="background:#fce7f3; border-left:5px solid #ec4899;">
+    <h3>📖 Elementary</h3>
+    <p><strong>Samberga Elementary School</strong><br>
+       Elementary School Graduate<br>
+       <em>S.Y 2008-2014</em>
+    </p>
+  </div>
+</section>
+
+
+    
+    <section id="info">
+      <h1>Information</h1>
+      <div class="card" style="background:#e996c5; border-left:5px solid #ec4899;">
+        <p><strong>Age:</strong> 23 <br>
+           <strong>Birthday:</strong> August 15, 2002 <br>
+           <strong>Email:</strong> mikkaparas@gmail.com <br>
+           <strong>Phone:</strong> 0905-443-4739 <br>
+           <strong>Address:</strong> Sitio Samberga Sapang Maragul Tarlac City</p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
