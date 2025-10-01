@@ -11,9 +11,17 @@
     padding: 0;
     box-sizing: border-box;
   }
+  /*light mode to*/
   body {
     font-family: 'Poppins', sans-serif; 
-    background: #fff; color: #111;
+    background: #fff;
+    color: #111;
+  }
+  /* tapos eto dark mode */
+  body.dark-mode {
+    background: #111;
+    color: #fff;
+    font-family: 'Poppins', sans-serif; 
   }
   header {
     display: flex;
@@ -52,7 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  }
 
     
   .container {
@@ -60,24 +68,24 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px; padding: 40px;
     min-height: calc(100vh - 140px);
-  }
+    }
   .image-cont {
     display:flex;
     align-items:center;
     justify-content:center;
-  }
+    }
   .image-cont img {
     width: 500px;
     height: 500px;
     object-fit: cover;
     border-radius: 5px;
-  }
+    }
   
   .desc-cont {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+    }
   .desc-cont .tag {
     display: inline-block;
     background: #e6e6e6;
@@ -86,28 +94,32 @@
     border-radius: 4px;
     font-size: 12px;
     margin-bottom: 16px;
-  }
+    }
   .desc-cont h1 {
     font-size: 42px;
     margin-bottom: 16px;
-  }
+    }
   .desc-cont p {
     color: #555;
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.6;
-  }
+    }
   .desc-cont a {
     text-decoration: none;
     color: #111;
     font-weight: 600;
     margin-bottom: 20px;
-  }
+    }
   button {
     color: #e6e6e6;
     background-color: #111;
     border: none;
     cursor: pointer;
+    }
+  button.dark-mode {
+    color: #111;
+    background-color: #e6e6e6;
   }
       
   @media (max-width: 900px) {
@@ -120,7 +132,7 @@
 </head>
 <body>
   <header>
-    <div class="moon"><button>⏾</button></div>
+    <div class="moon"><button id="mode-switch" onclick="mode-change">⏾</button></div>
     <nav>
       <ul>
         <li><a href="" class="active">Home</a></li>
