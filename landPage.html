@@ -10,128 +10,200 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 10px;
-      padding: 10px;
-      min-height: 100%;
-      background-image: url(landPage.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: rgb(49, 71, 6);
       font-family: Arial, sans-serif;
     }
 
     .wrapper {
+      width: 90%;
+      max-width: 1300px;
       text-align: center;
       color: aliceblue;
-      margin-bottom: 80px;
+      padding-top: 40px;
     }
+
     h1 i {
       font-size: 50px;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
 
     .image-container {
-      margin-top: 70px;
+      margin-top: 50px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      flex-wrap: wrap;
-      justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
       gap: 40px;
     }
 
     .img-cont2 {
-      margin-top: 50px;
+      margin-top: 40px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
-      
+      flex-wrap: wrap;
     }
 
     .profile {
       display: flex;
-      justify-content: center;
       flex-direction: column;
       align-items: center;
       gap: 15px;
     }
 
     .profile img {
-      border-radius: 360px;
+      border-radius: 50%;
       height: 300px;
       width: 300px;
-      gap: 10px;
+      object-fit: cover;
     }
 
     .profile a {
       text-decoration: none;
-      color: aliceblue;
       font-size: 22px;
-      transition: color 0.3s ease;
     }
 
-    .profile a:hover {
-      color: #ff2020;
-      transform: scale(1.05);
+    .emoji {
+      font-size: 28px;
+      margin-left: 8px;
     }
 
-    .profile:hover img {
-      animation: grow-shrink 0.6s ease forwards;
+    #factBox {
+      margin-top: 50px;
+      padding: 15px 20px;
+      background: rgba(255, 255, 255, 0.068);
+      border-radius: 10px;
+      font-size: 20px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    @media (max-width: 1024px) {
-      .image-container {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .image-container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .img-cont2 {
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 30px;
-      }
-    }
-
-
+   
+    
   </style>
 </head>
 <body>
+
+  <!-- WEATHER BOX  -->
+  <div id="weatherBox" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    
+  ">Loading weather...</div>
+
   <div class="wrapper">
-    <h1><i class="bi bi-people">  Profiles</i></h1>
+    
+    <h1><i class="bi bi-people"> Profiles</i></h1>
+
     <div class="image-container">
+
       <div class="profile">
         <img src="Antigo/antigo.jpg" alt="Juramuel N. Antigo">
-        <a href="Antigo/Jura-Portfolio.html" target="_blank">Juramuel N. Antigo</a>
+        <a href="Antigo/Jura-Portfolio.html" target="_blank">Juramuel N. Antigo <span class="emoji"></span></a>
       </div>
 
       <div class="profile">
         <img src="Capiendo/capiendo.jpg" alt="Justine Endree T. Capiendo">
-        <a href="Capiendo/Capiendo-Resume.html" target="_blank">Justine Endree T. Capiendo</a>
+        <a href="Capiendo/Capiendo-Resume.html" target="_blank">Justine Endree T. Capiendo <span class="emoji"></span></a>
       </div>
 
       <div class="profile">
         <img src="Dulay/rico.jpg" alt="Rico Adonis F. Dulay">
-        <a href="Dulay/profileRico.html" target="_blank">Rico Adonis F. Dulay</a>
+        <a href="Dulay/profileRico.html" target="_blank">Rico Adonis F. Dulay <span class="emoji"></span></a>
       </div>
+
     </div>
+
     <div class="img-cont2">
+
       <div class="profile">
         <img src="Madriaga/Hezzele.jpg" alt="Hezzele Madriaga">
-        <a href="Madriaga/Madriaga-Resume.html" target="_blank">Hezzele Madriaga</a>
+        <a href="Madriaga/Madriaga-Resume.html" target="_blank">Hezzele Madriaga <span class="emoji"></span></a>
       </div>
 
       <div class="profile">
         <img src="ParasM/paras.jpg" alt="Mika E. Paras">
-        <a href="ParasM/Resume.html" target="_blank">Mika E. Paras</a>
+        <a href="ParasM/Resume.html" target="_blank">Mikka E. Paras <span class="emoji"></span></a>
       </div>
-      </div>
+
+    </div>
+
+    <div id="factBox">Loading fun fact...</div>
+
   </div>
+
+  <script>
+    async function loadEmojis() {
+      document.querySelectorAll(".emoji").forEach(async (span) => {
+        try {
+          const res = await fetch("https://emojihub.yurace.pro/api/random");
+          const data = await res.json();
+          span.innerHTML = data.htmlCode[0];
+        } catch {
+          span.innerHTML = "😊";
+        }
+      });
+    }
+
+    async function loadFact() {
+      try {
+        const res = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
+        const data = await res.json();
+        document.getElementById("factBox").innerText = "Did you know? " + data.text;
+      } catch {
+        document.getElementById("factBox").innerText = "Could not load a fact.";
+      }
+    }
+
+    async function applyRandomColors() {
+  const elements = document.querySelectorAll(".profile a");
+
+  for (let el of elements) {
+    try {
+      const res = await fetch("https://www.colr.org/json/color/random");
+      const data = await res.json();
+      const color = "#" + data.colors[0].hex;
+      el.style.color = color;
+    } catch {
+      el.style.color = "#ffffff";
+    }
+  }
+}
+
+    async function loadWeatherTarlac() {
+      const weatherDiv = document.getElementById("weatherBox");
+      try {
+        const res = await fetch("https://corsproxy.io/?https://wttr.in/Tarlac%20City?format=j1");
+        const data = await res.json();
+
+        const area = data.nearest_area[0].areaName[0].value;
+        const temp = data.current_condition[0].temp_C;
+        const desc = data.current_condition[0].weatherDesc[0].value;
+        const icon = data.current_condition[0].weatherIconUrl[0].value;
+
+        weatherDiv.innerHTML = `
+          <img src="${icon}" style="width:40px; vertical-align:middle;">
+          <b>${area}</b>: ${temp}°C — ${desc}
+        `;
+      } catch {
+        weatherDiv.innerHTML = "Failed to load weather";
+      }
+    }
+
+    loadEmojis();
+    loadFact();
+    applyRandomColors();
+    loadWeatherTarlac();
+  </script>
+
 </body>
 </html>
